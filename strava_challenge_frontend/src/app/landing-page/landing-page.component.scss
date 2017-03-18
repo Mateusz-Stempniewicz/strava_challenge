@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700');
+
 .first_section {
   background-image: url('./img/obraz1.jpg');
   background-repeat: no-repeat;
@@ -14,7 +16,40 @@
   background-image: url('./img/obraz2.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position-y: -150px; 
+  background-position-y: -150px;
   height: 100vh;
+}
 
+.container {
+  max-width: 960px;
+  display: flex;
+}
+
+.strava-color {
+  color: #fc4c02;
+}
+
+.landing-header {
+  width: 100%;
+  background-color: black;
+  color: white;
+
+  &--title {
+    font-size: 2rem;
+    font-weight: bold;
+    font-family: 'Yanone Kaffeesatz', 'Helvetica', Arial, sans-serif;
+    width: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    align-self: center;
+  }
+
+  &--login {
+    color: white;
+    margin: 10px;
+  }
+
+  &--register {
+    margin: 10px;
+  }
 }
