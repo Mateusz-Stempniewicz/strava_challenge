@@ -4,6 +4,7 @@
   background-image: url('./img/obraz1.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   height: 100vh;
 }
 
@@ -23,6 +24,13 @@
 .container {
   max-width: 960px;
   display: flex;
+}
+
+.container2 {
+  max-width: 960px;
+  height: inherit;
+  display: flex;
+  margin: auto;
 }
 
 .strava-color {
@@ -51,5 +59,12 @@
 
   &--register {
     margin: 10px;
+  }
+
+  &--content-text {
+    color: white;
+    width: auto;
+    font-size: 3.75rem;
+    align-self: center;
   }
 }
