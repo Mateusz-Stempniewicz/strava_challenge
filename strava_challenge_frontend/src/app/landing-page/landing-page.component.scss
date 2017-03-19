@@ -33,9 +33,20 @@ $strava-color: #fc4c02;
     display: flex;
     color: $white;
 
+    @media (max-width: 990px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
     &-info {
       height: calc(100% - 44px);
       align-items: center;
+    }
+
+    &-middle {
+      flex-direction: column;
+      height: inherit;
+      justify-content: space-around;
     }
 
     &-summary {
@@ -56,10 +67,46 @@ $strava-color: #fc4c02;
     }
   }
 
+  &-info-box {
+    &:nth-child(even) {
+      align-self: flex-start;
+    }
+
+    &:nth-child(odd) {
+      align-self: flex-end;
+      align-content: flex-end;
+    }
+
+    &-details-right {
+      float: right;
+    }
+
+    &-title {
+      color: $strava-color;
+    }
+
+    &-description {
+      color: $black;
+    }
+  }
+
+  &-picture {
+    width: 100px;
+
+    &-left {
+      float: left;
+      margin-right: 15px;
+    }
+
+    &-right {
+      float: right;
+      margin-left: 15px;
+    }
+  }
+
   &-info-text {
     width: auto;
     font-size: 3.75rem;
-    align-self: center;
   }
 
   &-header {
@@ -84,6 +131,11 @@ $strava-color: #fc4c02;
       margin: 10px;
       color: $strava-color;
     }
+
+    &--info {
+      color: $black;
+      text-align: center;
+    }
   }
 }
 
@@ -98,4 +150,20 @@ $strava-color: #fc4c02;
 
 .m-t-30 {
   margin-top: 30px;
+}
+
+.footer {
+  background-color: $black;
+
+  &-container {
+    @extend .landing-container;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &-menu {
+    &-link {
+      color: $strava-color;
+    }
+  }
 }
