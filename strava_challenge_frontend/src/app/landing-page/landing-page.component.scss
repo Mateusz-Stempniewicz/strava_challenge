@@ -1,125 +1,101 @@
 @import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700');
 
-.first_section {
-  background-image: url('./img/obraz1.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  height: 100vh;
-}
+$white: #ffffff;
+$black: #000000;
+$strava-color: #fc4c02;
 
-.second_section {
-  background-color: white;
-  width: 960px;
-  margin: auto;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  padding: 15px 0;
-  justify-content: space-around;
+.landing {
+  &-section {
+    height: 100vh;
+    background-color: $white;
 
-  .header {
-    text-align: center;
+    &--image {
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
 
-    .strava {
-      font-size: 2.05rem;
-      font-family: 'Yanone Kaffeesatz', 'Helvetica', Arial, sans-serif;
+    &--top {
+      @extend .landing-section--image;
+      background-image: url('./img/obraz1.jpg');
+    }
 
-      &-name {
-        text-transform: uppercase;
+    &--bottom {
+      @extend .landing-section--image;
+      background-image: url('./img/obraz2.jpg');
+    }
+  }
+
+  &-container {
+    max-width: 960px;
+    min-width: 400px;
+    margin: auto;
+    display: flex;
+    color: $white;
+
+    &-info {
+      height: calc(100% - 44px);
+      align-items: center;
+    }
+
+    &-summary {
+      flex-direction: column;
+      height: 100%;
+      align-items: flex-end;
+      justify-content: center;
+
+      &-text {
+        font-size: 3rem;
+        font-weight: bold;
+        line-height: 3.5rem;
+      }
+
+      &-title {
+        font-size: 4rem;
       }
     }
   }
 
-  .box {
-    // margin-top: 25px;
-    h2 {
-      color: #fc4c02;
-    }
-  }
-
-  .box-left {
-    align-self: flex-start;
-  }
-
-  .box-right {
-    align-self: flex-end;
-    align-content: flex-end;
-  }
-}
-
-.third_section {
-  background-image: url('./img/obraz2.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position-y: -150px;
-  height: 100vh;
-}
-
-.container {
-  max-width: 960px;
-  display: flex;
-}
-
-.container3 {
-  max-width: 960px;
-  display: flex;
-  flex-direction: column;
-}
-
-.container2 {
-  max-width: 960px;
-  height: inherit;
-  display: flex;
-  margin: auto;
-}
-
-.strava-color {
-  color: #fc4c02;
-}
-
-.landing-header {
-  width: 100%;
-  background-color: black;
-  color: white;
-
-  &--title {
-    font-size: 2rem;
-    font-weight: bold;
-    font-family: 'Yanone Kaffeesatz', 'Helvetica', Arial, sans-serif;
-    width: auto;
-    margin-right: auto;
-    margin-bottom: 0;
-    align-self: center;
-  }
-
-  &--login {
-    color: white;
-    margin: 10px;
-  }
-
-  &--register {
-    margin: 10px;
-  }
-
-  &--content-text {
-    color: white;
+  &-info-text {
     width: auto;
     font-size: 3.75rem;
     align-self: center;
   }
+
+  &-header {
+    background-color: $black;
+    color: $white;
+
+    &--title {
+      font-size: 2rem;
+      font-family: 'Yanone Kaffeesatz', 'Helvetica', Arial, sans-serif;
+      width: auto;
+      margin-right: auto;
+      margin-bottom: 0;
+      align-self: center;
+    }
+
+    &--login {
+      color: $white;
+      margin: 10px;
+    }
+
+    &--register {
+      margin: 10px;
+      color: $strava-color;
+    }
+  }
 }
 
-.picture {
-  width: 100px;
-  margin: 0 15px;
+.strava {
+  font-family: 'Yanone Kaffeesatz', 'Helvetica', Arial, sans-serif;
 
-  &-left {
-    float: left;
+  &:first-of-type {
+    color: $strava-color;
+    text-transform: uppercase;
   }
+}
 
-  &-right{
-    float: right;
-  }
+.m-t-30 {
+  margin-top: 30px;
 }
