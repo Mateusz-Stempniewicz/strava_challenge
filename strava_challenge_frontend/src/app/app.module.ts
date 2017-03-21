@@ -5,11 +5,13 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { LandingPageComponent } from './landing-page/landing-page.component';
+import { HamburgerMenuComponent } from './hamburger-menu/hamburger-menu.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    HamburgerMenuComponent
   ],
   imports: [
     BrowserModule,

@@ -1,11 +1,7 @@
-.container {
-  background-color: yellow;
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700');
 
-  .title {
-    color: red;
-  }
-}
-
-.title {
-  color: blue;
-}
+$shadow-color: #333333;
+$strava-color: #fc4c02;
+$black: #000;
+$white: #fff;

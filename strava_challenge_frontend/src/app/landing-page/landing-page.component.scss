@@ -1,11 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:700');
-
-$white: #ffffff;
-$black: #000000;
-$strava-color: #fc4c02;
+@import '../app.component.scss';
 
 .landing {
-  &-section {
+  &__section {
     height: 100vh;
     background-color: $white;
 
@@ -15,28 +11,28 @@ $strava-color: #fc4c02;
       background-position: center;
     }
 
-    &--top {
-      @extend .landing-section--image;
+    &--intro {
+      @extend .landing__section--image;
       background-image: url('./img/obraz1.jpg');
     }
 
     &--bottom {
-      @extend .landing-section--image;
+      @extend .landing__section--image;
       background-image: url('./img/obraz2.jpg');
     }
   }
 
   &-container {
-    max-width: 960px;
-    min-width: 400px;
-    margin: auto;
-    display: flex;
-    color: $white;
-
-    @media (max-width: 990px) {
-      padding-left: 15px;
-      padding-right: 15px;
-    }
+    // max-width: 960px;
+    // min-width: 400px;
+    // margin: auto;
+    // display: flex;
+    // color: $white;
+    //
+    // @media (max-width: 990px) {
+    //   padding-left: 15px;
+    //   padding-right: 15px;
+    // }
 
     &-info {
       height: calc(100% - 44px);
@@ -110,17 +106,65 @@ $strava-color: #fc4c02;
   }
 
   &-header {
-    background-color: $black;
-    color: $white;
+    // background-color: $black;
+    // color: $white;
 
     &--title {
-      font-size: 2rem;
-      font-family: 'Yanone Kaffeesatz', 'Helvetica', Arial, sans-serif;
-      width: auto;
-      margin-right: auto;
-      margin-bottom: 0;
-      align-self: center;
+      // font-size: 2rem;
+      // font-family: 'Yanone Kaffeesatz', 'Helvetica', Arial, sans-serif;
+      // width: auto;
+      // margin-right: auto;
+      // margin-bottom: 0;
+      // align-self: center;
     }
+
+    // &--login {
+    //   color: $white;
+    //   margin: 10px;
+    // }
+    //
+    // &--register {
+    //   margin: 10px;
+    //   color: $strava-color;
+    // }
+
+    &--info {
+      color: $black;
+      text-align: center;
+    }
+  }
+}
+
+.section {
+  &__header {
+    background-color: $black;
+    color: $white;
+    height: 45px;
+  }
+
+  &__container {
+    max-width: 960px;
+    margin: auto;
+    display: flex;
+    color: $white;
+
+    @media (max-width: 990px) {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-family: 'Yanone Kaffeesatz', 'Helvetica', Arial, sans-serif;
+    width: auto;
+    margin-right: auto;
+    margin-bottom: 0;
+    align-self: center;
+  }
+
+  &__menu {
+    display: flex;
 
     &--login {
       color: $white;
@@ -132,9 +176,17 @@ $strava-color: #fc4c02;
       color: $strava-color;
     }
 
-    &--info {
-      color: $black;
-      text-align: center;
+    &--desktop {
+      @media (max-width: 499px) {
+        display: none;
+      }
+    }
+
+    &--mobile {
+      margin: 6px 10px;
+      @media (min-width: 500px) {
+        display: none;
+      }
     }
   }
 }
@@ -156,7 +208,7 @@ $strava-color: #fc4c02;
   background-color: $black;
 
   &-container {
-    @extend .landing-container;
+    @extend .section__container;
     justify-content: space-between;
     align-items: center;
   }

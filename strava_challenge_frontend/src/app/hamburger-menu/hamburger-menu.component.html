@@ -1,0 +1,15 @@
+<div class="side-nav">
+  <button class="side-nav__menu-icon"
+          (click)="toggleMenu()"
+          [ngClass]="{
+            'active': showMenu
+          }">
+  </button>
+  <div class="side-nav__container"
+       [ngClass]="{
+         'active': showMenu
+       }">
+    <a href="#" class="side-nav__link">Login</a>
+    <a href="#" class="side-nav__link side-nav__link--register">Register</a>
+  </div>
+</div>
