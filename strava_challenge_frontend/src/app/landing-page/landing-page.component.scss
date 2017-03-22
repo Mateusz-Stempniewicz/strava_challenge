@@ -2,7 +2,7 @@
 
 .landing {
   &__section {
-    height: 100vh;
+    min-height: 100vh;
     background-color: $white;
 
     &--image {
@@ -41,115 +41,63 @@
     }
   }
 
-  &__container {
-    // max-width: 960px;;
-    // min-width: 400px;
-    // margin: auto;
-    // display: flex;
-    // color: $white;
-    //
-    // @media (max-width: 990px) {
-    //   padding-left: 15px;
-    //   padding-right: 15px;
-    // }
+  &__box {
+    margin-top: 30px;
 
-    // &--intro {
-    //   height: calc(100% - 45px);
-    //   align-items: center;
-    // }
-
-    &-middle {
-      flex-direction: column;
-      height: inherit;
-      justify-content: space-around;
-    }
-
-    &-summary {
-      flex-direction: column;
-      height: 100%;
-      align-items: flex-end;
-      justify-content: center;
-
-      &-text {
-        font-size: 3rem;
-        font-weight: bold;
-        line-height: 3.5rem;
+    @media (min-width: 750px) {
+      &:nth-child(even) {
+        text-align: left;
       }
 
-      &-title {
-        font-size: 4rem;
+      &:nth-child(odd) {
+        text-align: right;
       }
     }
-  }
 
-  &-info-box {
-    &:nth-child(even) {
-      align-self: flex-start;
+    &--picture {
+      width: 60px;
+
+      @media (min-width: 750px) {
+        width: 100px;
+
+        &--left {
+          float: left;
+          margin-right: 20px;
+        }
+
+        &--right {
+          float: right;
+          margin-left: 20px;
+        }
+      }
     }
 
-    &:nth-child(odd) {
-      align-self: flex-end;
-      align-content: flex-end;
+    &--container {
+      @media (min-width: 750px) {
+        display: inline-block;
+        padding-top: 15px;
+
+        &--friends {
+          padding-top: 25px;
+        }
+
+        &--trophy {
+          padding-top: 5px;
+        }
+      }
     }
-
-    &-details-right {
-      float: right;
-    }
-
-    &-title {
-      color: $strava-color;
-    }
-
-    &-description {
-      color: $black;
-    }
-  }
-
-  &-picture {
-    width: 100px;
-
-    &-left {
-      float: left;
-      margin-right: 15px;
-    }
-
-    &-right {
-      float: right;
-      margin-left: 15px;
-    }
-  }
-
-  &-info-text {
-    width: auto;
-    font-size: 3.75rem;
-  }
-
-  &-header {
-    // background-color: $black;
-    // color: $white;
 
     &--title {
-      // font-size: 2rem;
-      // font-family: 'Yanone Kaffeesatz', 'Helvetica', Arial, sans-serif;
-      // width: auto;
-      // margin-right: auto;
-      // margin-bottom: 0;
-      // align-self: center;
+      color: $strava-color;
+      font-size: 1.5rem;
+      @media (min-width: 750px) {
+        font-size: 2rem;
+      }
     }
 
-    // &--login {
-    //   color: $white;
-    //   margin: 10px;
-    // }
-    //
-    // &--register {
-    //   margin: 10px;
-    //   color: $strava-color;
-    // }
-
-    &--info {
+    &--description {
       color: $black;
-      text-align: center;
+      font-size: 1rem;
     }
   }
 }
@@ -173,8 +121,17 @@
     }
 
     @media (max-width: 990px) {
-      padding-left: 15px;
-      padding-right: 15px;
+      padding: 0 15px;
+    }
+
+    &--details {
+      flex-direction: column;
+      height: inherit;
+      color: $black;
+
+      padding-top: 25px;
+      font-size: 1rem;
+      text-align: center;
     }
   }
 
@@ -185,6 +142,14 @@
     margin-right: auto;
     margin-bottom: 0;
     align-self: center;
+
+    &--details {
+      font-size: 1.5rem;
+
+      @media (min-width: 750px) {
+        font-size: 2rem;
+      }
+    }
   }
 
   &__menu {
