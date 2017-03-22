@@ -14,6 +14,10 @@
     &--intro {
       @extend .landing__section--image;
       background-image: url('./img/obraz1.jpg');
+
+      @media (max-width: 950px) {
+        background-position: right;
+      }
     }
 
     &--bottom {
@@ -22,8 +26,23 @@
     }
   }
 
-  &-container {
-    // max-width: 960px;
+  &__text {
+    &--intro {
+      text-align: center;
+
+      @media (min-width: 500px) {
+        text-align: left;
+        font-size: 2.5rem;
+      }
+
+      @media (min-width: 750px) {
+        font-size: 3.75rem;
+      }
+    }
+  }
+
+  &__container {
+    // max-width: 960px;;
     // min-width: 400px;
     // margin: auto;
     // display: flex;
@@ -34,10 +53,10 @@
     //   padding-right: 15px;
     // }
 
-    &-info {
-      height: calc(100% - 44px);
-      align-items: center;
-    }
+    // &--intro {
+    //   height: calc(100% - 45px);
+    //   align-items: center;
+    // }
 
     &-middle {
       flex-direction: column;
@@ -147,6 +166,11 @@
     margin: auto;
     display: flex;
     color: $white;
+
+    &--intro {
+      height: calc(100vh - 45px);
+      align-items: center;
+    }
 
     @media (max-width: 990px) {
       padding-left: 15px;
