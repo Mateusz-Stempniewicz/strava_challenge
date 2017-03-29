@@ -68,10 +68,12 @@
 
     &--details {
       flex-direction: column;
-      height: inherit;
+      height: 100vh;
+      max-height: 750px;
+      justify-content: space-around;
       color: $black;
 
-      padding-top: 25px;
+      padding: 25px 0;
       font-size: 1rem;
       text-align: center;
     }
